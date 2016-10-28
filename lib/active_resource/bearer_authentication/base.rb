@@ -14,7 +14,7 @@ module ActiveResource
           if block_given?
             self.password = block
           else
-            @password.is_a?(Proc) ? @password.call : @password
+            self.password.is_a?(Proc) ? self.password.call : self.password
           end
         end
       end
